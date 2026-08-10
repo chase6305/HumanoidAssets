@@ -53,7 +53,7 @@
     <axis xyz="0 0 0" />
   </joint>
   <joint name="UPPER_BODY_BASE" type="fixed">
-    <origin xyz="0 0 0" rpy="0 0 0" />
+    <origin xyz="0 0 0.140" rpy="0 0 0" />
     <parent link="torso_base" />
     <child link="upper_body_base" />
   </joint>

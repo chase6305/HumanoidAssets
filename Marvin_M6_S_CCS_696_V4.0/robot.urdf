@@ -12,13 +12,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="visual/base_link.glb" />
+        <mesh filename="visual/glb/base_link.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="collision/base_link.stl" />
+        <mesh filename="collision/base_link.obj" />
       </geometry>
     </collision>
   </link>
@@ -31,13 +31,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="visual/torso_base.glb" />
+        <mesh filename="visual/glb/torso_base.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="collision/torso_base.stl" />
+        <mesh filename="collision/torso_base.obj" />
       </geometry>
     </collision>
   </link>
@@ -59,13 +59,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="visual/left_arm_base.glb" />
+        <mesh filename="visual/glb/left_arm_base.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="collision/left_arm_base.stl" />
+        <mesh filename="collision/left_arm_base.obj" />
       </geometry>
     </collision>
   </link>
@@ -78,13 +78,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="visual/shoulder_pitch_l_j1_link.glb" />
+        <mesh filename="visual/glb/shoulder_pitch_l_j1_link.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="collision/shoulder_pitch_l_j1_link.stl" />
+        <mesh filename="collision/shoulder_pitch_l_j1_link.obj" />
       </geometry>
     </collision>
   </link>
@@ -97,13 +97,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="visual/shoulder_roll_l_j2_link.glb" />
+        <mesh filename="visual/glb/shoulder_roll_l_j2_link.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="collision/shoulder_roll_l_j2_link.stl" />
+        <mesh filename="collision/shoulder_roll_l_j2_link.obj" />
       </geometry>
     </collision>
   </link>
@@ -116,13 +116,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="visual/elbow_pitch_l_j3_link.glb" />
+        <mesh filename="visual/glb/elbow_pitch_l_j3_link.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="collision/elbow_pitch_l_j3_link.stl" />
+        <mesh filename="collision/elbow_pitch_l_j3_link.obj" />
       </geometry>
     </collision>
   </link>
@@ -135,13 +135,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="visual/elbow_yaw_l_j4_link.glb" />
+        <mesh filename="visual/glb/elbow_yaw_l_j4_link.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="collision/elbow_yaw_l_j4_link.stl" />
+        <mesh filename="collision/elbow_yaw_l_j4_link.obj" />
       </geometry>
     </collision>
   </link>
@@ -154,13 +154,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="visual/wrist_pitch_l_j5_link.glb" />
+        <mesh filename="visual/glb/wrist_pitch_l_j5_link.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="collision/wrist_pitch_l_j5_link.stl" />
+        <mesh filename="collision/wrist_pitch_l_j5_link.obj" />
       </geometry>
     </collision>
   </link>
@@ -173,13 +173,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="visual/wrist_yaw_l_j6_link.glb" />
+        <mesh filename="visual/glb/wrist_yaw_l_j6_link.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="collision/wrist_yaw_l_j6_link.stl" />
+        <mesh filename="collision/wrist_yaw_l_j6_link.obj" />
       </geometry>
     </collision>
   </link>
@@ -192,35 +192,17 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="visual/wrist_roll_l_j7_link.glb" />
+        <mesh filename="visual/glb/wrist_roll_l_j7_link.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="collision/wrist_roll_l_j7_link.stl" />
+        <mesh filename="collision/wrist_roll_l_j7_link.obj" />
       </geometry>
     </collision>
   </link>
-  <link name="left_ee">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <mass value="0" />
-      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="visual/left_ee.glb" />
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="collision/left_ee.stl" />
-      </geometry>
-    </collision>
-  </link>
+  <link name="left_ee"> </link>
   <!-- End of (links for part: left_arm) -->
   <!---->
   <!---->
@@ -234,13 +216,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="visual/right_arm_base.glb" />
+        <mesh filename="visual/glb/right_arm_base.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="collision/right_arm_base.stl" />
+        <mesh filename="collision/right_arm_base.obj" />
       </geometry>
     </collision>
   </link>
@@ -253,13 +235,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="visual/shoulder_pitch_r_j1_link.glb" />
+        <mesh filename="visual/glb/shoulder_pitch_r_j1_link.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="collision/shoulder_pitch_r_j1_link.stl" />
+        <mesh filename="collision/shoulder_pitch_r_j1_link.obj" />
       </geometry>
     </collision>
   </link>
@@ -272,13 +254,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="visual/shoulder_roll_r_j2_link.glb" />
+        <mesh filename="visual/glb/shoulder_roll_r_j2_link.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="collision/shoulder_roll_r_j2_link.stl" />
+        <mesh filename="collision/shoulder_roll_r_j2_link.obj" />
       </geometry>
     </collision>
   </link>
@@ -291,13 +273,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="visual/elbow_pitch_r_j3_link.glb" />
+        <mesh filename="visual/glb/elbow_pitch_r_j3_link.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="collision/elbow_pitch_r_j3_link.stl" />
+        <mesh filename="collision/elbow_pitch_r_j3_link.obj" />
       </geometry>
     </collision>
   </link>
@@ -310,13 +292,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="visual/elbow_yaw_r_j4_link.glb" />
+        <mesh filename="visual/glb/elbow_yaw_r_j4_link.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="collision/elbow_yaw_r_j4_link.stl" />
+        <mesh filename="collision/elbow_yaw_r_j4_link.obj" />
       </geometry>
     </collision>
   </link>
@@ -329,13 +311,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="visual/wrist_pitch_r_j5_link.glb" />
+        <mesh filename="visual/glb/wrist_pitch_r_j5_link.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="collision/wrist_pitch_r_j5_link.stl" />
+        <mesh filename="collision/wrist_pitch_r_j5_link.obj" />
       </geometry>
     </collision>
   </link>
@@ -348,13 +330,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="visual/wrist_yaw_r_j6_link.glb" />
+        <mesh filename="visual/glb/wrist_yaw_r_j6_link.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="collision/wrist_yaw_r_j6_link.stl" />
+        <mesh filename="collision/wrist_yaw_r_j6_link.obj" />
       </geometry>
     </collision>
   </link>
@@ -367,35 +349,17 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="visual/wrist_roll_r_j7_link.glb" />
+        <mesh filename="visual/glb/wrist_roll_r_j7_link.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="collision/wrist_roll_r_j7_link.stl" />
+        <mesh filename="collision/wrist_roll_r_j7_link.obj" />
       </geometry>
     </collision>
   </link>
-  <link name="right_ee">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <mass value="0" />
-      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="visual/right_ee.glb" />
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="collision/right_ee.stl" />
-      </geometry>
-    </collision>
-  </link>
+  <link name="right_ee"> </link>
   <!-- End of (links for part: right_arm) -->
   <!---->
   <!---->
@@ -407,7 +371,7 @@
     <axis xyz="0 0 0" />
   </joint>
   <joint name="UPPER_BODY_BASE" type="fixed">
-    <origin xyz="0 0 0" rpy="0 0 0" />
+    <origin xyz="0 0 0.140" rpy="0 0 0" />
     <parent link="torso_base" />
     <child link="upper_body_base" />
   </joint>
@@ -537,13 +501,13 @@
   <!---->
   <!---->
   <joint name="TORSO_TO_LEFT_ARM_CONNECTOR" type="fixed">
-    <origin xyz="0 0.037 0.140" rpy="-1.5708 0 0" />
+    <origin xyz="0 0.037 0" rpy="-1.5708 0 0" />
     <parent link="upper_body_base" />
     <child link="left_arm_base" />
     <axis xyz="0 0 0" />
   </joint>
   <joint name="TORSO_TO_RIGHT_ARM_CONNECTOR" type="fixed">
-    <origin xyz="0 -0.037 0.140" rpy="1.5708 0 0" />
+    <origin xyz="0 -0.037 0" rpy="1.5708 0 0" />
     <parent link="upper_body_base" />
     <child link="right_arm_base" />
     <axis xyz="0 0 0" />
