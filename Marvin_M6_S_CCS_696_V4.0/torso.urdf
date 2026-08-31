@@ -1,43 +1,24 @@
 <?xml version='1.0' encoding='utf-8'?>
-<robot name="Marvin_M6_S_CCS_696_V4.0_torso">
+<robot name="marvin_m6_new_torso">
   <!---->
   <!---->
   <!-- Start of (links for part: torso) -->
   <link name="base_link">
     <inertial>
-      <origin xyz="0 1.33E-06 0.1597" rpy="0 0 0" />
-      <mass value="74.515" />
-      <inertia ixx="8.67491803" ixy="0.07182226" ixz="0" iyy="8.67495749" iyz="0.00008096" izz="4.32871357" />
+      <origin xyz="0.00403571850728641 0.000335695618980392 0.301505890307488" rpy="0 0 1.5707963267948966" />
+      <mass value="63.8" />
+      <inertia ixx="0.493610094338032" ixy="-0.00136699010100599" ixz="-4.109303853302E-06" iyy="0.510763192874308" iyz="6.8092702303E-06" izz="0.388114593314194" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 1.5707963267948966" />
       <geometry>
-        <mesh filename="visual/base_link.glb" />
+        <mesh filename="visual/glb/base_link.glb" />
       </geometry>
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 1.5707963267948966" />
       <geometry>
-        <mesh filename="collision/base_link.stl" />
-      </geometry>
-    </collision>
-  </link>
-  <link name="torso_base">
-    <inertial>
-      <origin xyz="1.321E-05 -4.225E-05 0.06485" rpy="0 0 0" />
-      <mass value="3.52" />
-      <inertia ixx="0.01763033" ixy="-0.00000075" ixz="0.00000045" iyy="0.02001856" iyz="7.41E-06" izz="0.01060882" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="visual/torso_base.glb" />
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="collision/torso_base.stl" />
+        <mesh filename="collision/base_link.obj" />
       </geometry>
     </collision>
   </link>
@@ -46,15 +27,9 @@
   <!---->
   <!---->
   <!-- Start of (joints for part: torso) -->
-  <joint name="BASE_LINK_TO_TORSO_CONNECTOR" type="fixed">
-    <origin xyz="0 0 0.981" rpy="0 0 0" />
-    <parent link="base_link" />
-    <child link="torso_base" />
-    <axis xyz="0 0 0" />
-  </joint>
   <joint name="UPPER_BODY_BASE" type="fixed">
-    <origin xyz="0 0 0.140" rpy="0 0 0" />
-    <parent link="torso_base" />
+    <origin xyz="-2.9142E-05 0 1.121" rpy="0 0 0" />
+    <parent link="base_link" />
     <child link="upper_body_base" />
   </joint>
   <!-- End of (joints for part: torso) -->

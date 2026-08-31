@@ -21,6 +21,9 @@ planning, and integration work.
 │   ├── torso.urdf
 │   ├── left_arm.urdf
 │   ├── right_arm.urdf
+│   ├── left_hand.urdf
+│   ├── right_hand.urdf
+│   ├── robot_with_ee.urdf
 │   ├── visual/
 │   └── collision/
 └── OpenArm/
@@ -50,8 +53,12 @@ planning, and integration work.
 ## Usage Notes
 
 - Load full robots from each `robot.urdf`.
+- For Marvin with the two-finger hands attached, load
+	`Marvin_M6_S_CCS_696_V4.0/robot_with_ee.urdf`.
 - Load sub-assemblies from `torso.urdf`, `left_arm.urdf`, or `right_arm.urdf`
 	when testing isolated components.
+- Load Marvin hands independently from `left_hand.urdf` or `right_hand.urdf`;
+	their root links are `left_ee` and `right_ee`, respectively.
 - Keep directory structure unchanged so relative mesh references remain valid.
 
 ## Maintenance Notes
