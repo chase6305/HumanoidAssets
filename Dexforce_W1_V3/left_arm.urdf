@@ -1,14 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--================================================================================================================-->
-<!--                                          DexForce Technology Co., Ltd                                          -->
-<!--                                                                                                                -->
-<!--                                       Robot URDF Model Generation Report                                       -->
-<!--                                      Generation Time: 2026-07-03 18:34:17                                      -->
-<!--                                  Version: DexForce URDF assembly manager V2.0                                  -->
-<!--                                           Included Modules: left_arm                                           -->
-<!--                            left_arm: {'version': 'v030', 'type': 'anthropomorphic'}                            -->
-<!--================================================================================================================-->
+<?xml version='1.0' encoding='utf-8'?>
 <robot name="left_arm__v030__[Arms-anthropomorphic]">
+  <!-- Start of (links for part: left arm) -->
   <link name="left_arm_base"> </link>
   <link name="shoulder_pitch_l_j1_link">
     <inertial>
@@ -144,6 +136,8 @@
     </collision>
   </link>
   <link name="left_ee"> </link>
+  <!-- End of (links for part: left arm) -->
+  <!-- Start of (joints for part: left arm) -->
   <joint name="SHOULDER_PITCH_L_J1" type="revolute">
     <origin xyz="0 0.113 0.0" rpy="0 0 0" />
     <parent link="left_arm_base" />
@@ -198,4 +192,5 @@
     <parent link="wrist_roll_l_j7_link" />
     <child link="left_ee" />
   </joint>
+  <!-- End of (joints for part: left arm) -->
 </robot>

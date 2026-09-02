@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="marvin_m6_pro_v2_torso">
+  <!-- Start of (links for part: torso) -->
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="visual/glb/base_link.glb" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="collision/base_link.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0081994 -0.0000051 0.47835" rpy="0.0000623 0.0062721 0.0034744" />
+      <mass value="18.846" />
+      <inertia ixx="0.463463" ixy="0" ixz="0" iyy="0.46325" iyz="0" izz="0.377657" />
+    </inertial>
+  </link>
+  <link name="upper_body_base" />
+  <!-- End of (links for part: torso) -->
+  <!-- Start of (joints for part: torso) -->
+  <joint name="UPPER_BODY_BASE" type="fixed">
+    <origin xyz="0 0 1.121" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="upper_body_base" />
+  </joint>
+  <!-- End of (joints for part: torso) -->
+</robot>

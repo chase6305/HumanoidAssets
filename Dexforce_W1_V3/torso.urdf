@@ -1,14 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--================================================================================================================-->
-<!--                                          DexForce Technology Co., Ltd                                          -->
-<!--                                                                                                                -->
-<!--                                       Robot URDF Model Generation Report                                       -->
-<!--                                      Generation Time: 2026-07-03 18:34:17                                      -->
-<!--                                  Version: DexForce URDF assembly manager V2.0                                  -->
-<!--                                            Included Modules: torso                                             -->
-<!--                                           torso: {'version': 'v030'}                                           -->
-<!--================================================================================================================-->
+<?xml version='1.0' encoding='utf-8'?>
 <robot name="torso__v030">
+  <!-- Start of (links for part: torso) -->
   <link name="torso_base"> </link>
   <link name="ankle_pitch_link">
     <inertial>
@@ -87,6 +79,8 @@
     </collision>
   </link>
   <link name="upper_body_base"> </link>
+  <!-- End of (links for part: torso) -->
+  <!-- Start of (joints for part: torso) -->
   <joint name="ANKLE_PITCH" type="revolute">
     <origin xyz="0 0 0.2875" rpy="0 0 0" />
     <parent link="torso_base" />
@@ -120,4 +114,5 @@
     <parent link="waist_yaw_link" />
     <child link="upper_body_base" />
   </joint>
+  <!-- End of (joints for part: torso) -->
 </robot>

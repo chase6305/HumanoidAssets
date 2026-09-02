@@ -1,14 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--================================================================================================================-->
-<!--                                          DexForce Technology Co., Ltd                                          -->
-<!--                                                                                                                -->
-<!--                                       Robot URDF Model Generation Report                                       -->
-<!--                                      Generation Time: 2026-07-03 18:34:17                                      -->
-<!--                                  Version: DexForce URDF assembly manager V2.0                                  -->
-<!--                                             Included Modules: head                                             -->
-<!--                                           head: {'version': 'v030'}                                            -->
-<!--================================================================================================================-->
+<?xml version='1.0' encoding='utf-8'?>
 <robot name="head__v030">
+  <!-- Start of (links for part: head) -->
   <link name="head_base"> </link>
   <link name="head_yaw_j1_link">
     <inertial>
@@ -50,6 +42,8 @@
   </link>
   <link name="eyes">
   </link>
+  <!-- End of (links for part: head) -->
+  <!-- Start of (joints for part: head) -->
   <joint name="HEAD_YAW_J1" type="revolute">
     <origin xyz="0 0 0.098" rpy="0 0 0" />
     <parent link="head_base" />
@@ -69,4 +63,5 @@
     <parent link="head_pitch_j2_link" />
     <child link="eyes" />
   </joint>
+  <!-- End of (joints for part: head) -->
 </robot>

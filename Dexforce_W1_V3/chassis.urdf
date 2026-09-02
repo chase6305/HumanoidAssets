@@ -1,13 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--================================================================================================================-->
-<!--                                          DexForce Technology Co., Ltd                                          -->
-<!--                                                                                                                -->
-<!--                                       Robot URDF Model Generation Report                                       -->
-<!--                                      Generation Time: 2026-07-03 18:34:17                                      -->
-<!--                                  Version: DexForce URDF assembly manager V2.0                                  -->
-<!--                                           Included Modules: chassis                                            -->
-<!--================================================================================================================-->
+<?xml version='1.0' encoding='utf-8'?>
 <robot name="chassis">
+  <!-- Start of (links for part: chassis) -->
   <link name="chassis_base_link">
     <inertial>
       <origin xyz="-0.0315847 -0.00190444 0.13284588" rpy="0 0 0" />
@@ -27,4 +20,7 @@
       </geometry>
     </collision>
   </link>
+  <!-- End of (links for part: chassis) -->
+  <!-- Start of (joints for part: chassis) -->
+  <!-- End of (joints for part: chassis) -->
 </robot>

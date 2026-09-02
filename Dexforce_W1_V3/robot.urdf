@@ -1,21 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--================================================================================================================-->
-<!--                                          DexForce Technology Co., Ltd                                          -->
-<!--                                                                                                                -->
-<!--                                       Robot URDF Model Generation Report                                       -->
-<!--                                      Generation Time: 2026-07-14 18:34:17                                      -->
-<!--                                  Version: DexForce URDF assembly manager V2.0                                  -->
-<!--                        Included Modules: chassis + torso + head + left_arm + right_arm                         -->
-<!--                                           torso: {'version': 'v030'}                                           -->
-<!--                                           head: {'version': 'v030'}                                            -->
-<!--                            left_arm: {'version': 'v030', 'type': 'anthropomorphic'}                            -->
-<!--                           right_arm: {'version': 'v030', 'type': 'anthropomorphic'}                            -->
-<!--                              ASSEMBLY_SIGNATURE: 4e566950cfed1d3f30c39b49ef67815d                              -->
-<!--================================================================================================================-->
+<?xml version='1.0' encoding='utf-8'?>
 <robot name="robot__v030__[Arms-anthropomorphic]">
+  <!-- Start of (links for part: robot) -->
   <link name="base_link" />
-  <!---->
-  <!-- Start of (links for part: chassis) -->
   <link name="chassis_base_link">
     <inertial>
       <origin xyz="-0.0315847 -0.00190444 0.13284588" rpy="0 0 0" />
@@ -35,10 +21,6 @@
       </geometry>
     </collision>
   </link>
-  <!-- End of (links for part: chassis) -->
-  <!---->
-  <!---->
-  <!-- Start of (links for part: torso) -->
   <link name="torso_base"> </link>
   <link name="ankle_pitch_link">
     <inertial>
@@ -117,10 +99,6 @@
     </collision>
   </link>
   <link name="upper_body_base"> </link>
-  <!-- End of (links for part: torso) -->
-  <!---->
-  <!---->
-  <!-- Start of (links for part: head) -->
   <link name="head_base"> </link>
   <link name="head_yaw_j1_link">
     <inertial>
@@ -162,10 +140,6 @@
   </link>
   <link name="eyes">
   </link>
-  <!-- End of (links for part: head) -->
-  <!---->
-  <!---->
-  <!-- Start of (links for part: left_arm) -->
   <link name="left_arm_base"> </link>
   <link name="shoulder_pitch_l_j1_link">
     <inertial>
@@ -301,10 +275,6 @@
     </collision>
   </link>
   <link name="left_ee"> </link>
-  <!-- End of (links for part: left_arm) -->
-  <!---->
-  <!---->
-  <!-- Start of (links for part: right_arm) -->
   <link name="right_arm_base"> </link>
   <link name="shoulder_pitch_r_j1_link">
     <inertial>
@@ -440,14 +410,8 @@
     </collision>
   </link>
   <link name="right_ee"> </link>
-  <!-- End of (links for part: right_arm) -->
-  <!---->
-  <!---->
-  <!-- Start of (joints for part: chassis) -->
-  <!-- End of (joints for part: chassis) -->
-  <!---->
-  <!---->
-  <!-- Start of (joints for part: torso) -->
+  <!-- End of (links for part: robot) -->
+  <!-- Start of (joints for part: robot) -->
   <joint name="ANKLE_PITCH" type="revolute">
     <origin xyz="0 0 0.2875" rpy="0 0 0" />
     <parent link="torso_base" />
@@ -481,10 +445,6 @@
     <parent link="waist_yaw_link" />
     <child link="upper_body_base" />
   </joint>
-  <!-- End of (joints for part: torso) -->
-  <!---->
-  <!---->
-  <!-- Start of (joints for part: head) -->
   <joint name="HEAD_YAW_J1" type="revolute">
     <origin xyz="0 0 0.098" rpy="0 0 0" />
     <parent link="head_base" />
@@ -504,10 +464,6 @@
     <parent link="head_pitch_j2_link" />
     <child link="eyes" />
   </joint>
-  <!-- End of (joints for part: head) -->
-  <!---->
-  <!---->
-  <!-- Start of (joints for part: left_arm) -->
   <joint name="SHOULDER_PITCH_L_J1" type="revolute">
     <origin xyz="0 0.113 0.0" rpy="0 0 0" />
     <parent link="left_arm_base" />
@@ -562,10 +518,6 @@
     <parent link="wrist_roll_l_j7_link" />
     <child link="left_ee" />
   </joint>
-  <!-- End of (joints for part: left_arm) -->
-  <!---->
-  <!---->
-  <!-- Start of (joints for part: right_arm) -->
   <joint name="SHOULDER_PITCH_R_J1" type="revolute">
     <origin xyz="0 -0.113 0.0" rpy="0 0 0" />
     <parent link="right_arm_base" />
@@ -620,8 +572,6 @@
     <parent link="wrist_roll_r_j7_link" />
     <child link="right_ee" />
   </joint>
-  <!-- End of (joints for part: right_arm) -->
-  <!---->
   <joint name="BASE_LINK_TO_CHASSIS_CONNECTOR" type="fixed">
     <origin xyz="0 0 0" rpy="0 0 0" />
     <parent link="base_link" />
@@ -647,4 +597,5 @@
     <parent link="upper_body_base" />
     <child link="head_base" />
   </joint>
+  <!-- End of (joints for part: robot) -->
 </robot>

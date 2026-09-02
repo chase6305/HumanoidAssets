@@ -1,13 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--================================================================================================================-->
-<!--                                          DexForce Technology Co., Ltd                                          -->
-<!--                                                                                                                -->
-<!--                                       Robot URDF Model Generation Report                                       -->
-<!--                                      Generation Time: 2026-07-17 10:45:52                                      -->
-<!--                                  Version: DexForce URDF assembly manager V2.0                                  -->
-<!--                                          Included Modules: left_hand                                           -->
-<!--                                     left_hand: {'type': 'BrainCo_Revo1_R'}                                     -->
-<!--================================================================================================================-->
+<?xml version='1.0' encoding='utf-8'?>
 <robot name="left_hand__[Hands-BrainCo_Revo1_R]__left_hand-BrainCo_Revo1_R">
   <link name="left_base_link" />
   <link name="left_connector_link">
@@ -35,9 +26,6 @@
       <geometry>
         <mesh filename="visual/left_hand/hand_base_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -58,9 +46,6 @@
       <geometry>
         <mesh filename="visual/left_hand/t_cmc_yaw_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -80,9 +65,6 @@
       <geometry>
         <mesh filename="visual/left_hand/t_mcp_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -102,9 +84,6 @@
       <geometry>
         <mesh filename="visual/left_hand/if_mcp_pitch_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -124,9 +103,6 @@
       <geometry>
         <mesh filename="visual/left_hand/if_dip_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -146,9 +122,6 @@
       <geometry>
         <mesh filename="visual/left_hand/mf_mcp_pitch_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -168,9 +141,6 @@
       <geometry>
         <mesh filename="visual/left_hand/mf_dip_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -190,9 +160,6 @@
       <geometry>
         <mesh filename="visual/left_hand/rf_mcp_pitch_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -212,9 +179,6 @@
       <geometry>
         <mesh filename="visual/left_hand/rf_dip_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -234,9 +198,6 @@
       <geometry>
         <mesh filename="visual/left_hand/lf_mcp_pitch_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="1 1 1 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -256,9 +217,6 @@
       <geometry>
         <mesh filename="visual/left_hand/lf_dip_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />

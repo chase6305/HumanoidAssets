@@ -1,23 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--================================================================================================================-->
-<!--                                          DexForce Technology Co., Ltd                                          -->
-<!--                                                                                                                -->
-<!--                                       Robot URDF Model Generation Report                                       -->
-<!--                                      Generation Time: 2026-07-17 10:45:52                                      -->
-<!--                                  Version: DexForce URDF assembly manager V2.0                                  -->
-<!--            Included Modules: chassis + torso + head + left_arm + right_arm + left_hand + right_hand            -->
-<!--                                           torso: {'version': 'v026'}                                           -->
-<!--                                           head: {'version': 'v026'}                                            -->
-<!--                            left_arm: {'version': 'v026', 'type': 'anthropomorphic'}                            -->
-<!--                           right_arm: {'version': 'v026', 'type': 'anthropomorphic'}                            -->
-<!--                                     left_hand: {'type': 'BrainCo_Revo1_R'}                                     -->
-<!--                                    right_hand: {'type': 'BrainCo_Revo1_R'}                                     -->
-<!--                              ASSEMBLY_SIGNATURE: 6d663a24382b70826b219c0b25153aff                              -->
-<!--================================================================================================================-->
+<?xml version='1.0' encoding='utf-8'?>
 <robot name="robot_with_ee__v026__[Arms-anthropomorphic]__[Hands-BrainCo_Revo1_R]">
   <link name="base_link" />
-  <!---->
-  <!-- Start of (links for part: chassis) -->
   <link name="chassis_base_link">
     <inertial>
       <origin xyz="-6.9481412e-03 -2.8983362e-03  1.0943608e-01" rpy="0 0 0" />
@@ -51,10 +34,6 @@
       <inertia ixx="0.00458785167524735" ixy="2.63111168444812E-11" ixz="-2.02429769062992E-10" iyy="0.00846145621331285" iyz="-7.59817809326904E-11" izz="0.00458785310793277" />
     </inertial>
   </link>
-  <!-- End of (links for part: chassis) -->
-  <!---->
-  <!---->
-  <!-- Start of (links for part: torso) -->
   <link name="torso_base_link"> </link>
   <link name="ankle">
     <inertial>
@@ -132,10 +111,6 @@
       </geometry>
     </collision>
   </link>
-  <!-- End of (links for part: torso) -->
-  <!---->
-  <!---->
-  <!-- Start of (links for part: head) -->
   <link name="head_base_link"> </link>
   <link name="neck_base"> </link>
   <link name="neck1">
@@ -178,10 +153,6 @@
   </link>
   <link name="eyes">
   </link>
-  <!-- End of (links for part: head) -->
-  <!---->
-  <!---->
-  <!-- Start of (links for part: left_arm) -->
   <link name="left_arm_base_link"> </link>
   <link name="base_to_left_arm_connector"> </link>
   <link name="left_arm_base"> </link>
@@ -319,10 +290,6 @@
     </collision>
   </link>
   <link name="left_ee"> </link>
-  <!-- End of (links for part: left_arm) -->
-  <!---->
-  <!---->
-  <!-- Start of (links for part: right_arm) -->
   <link name="right_arm_base_link"> </link>
   <link name="base_to_right_arm_connector"> </link>
   <link name="right_arm_base"> </link>
@@ -460,10 +427,6 @@
     </collision>
   </link>
   <link name="right_ee"> </link>
-  <!-- End of (links for part: right_arm) -->
-  <!---->
-  <!---->
-  <!-- Start of (links for part: left_hand) -->
   <link name="left_base_link" />
   <link name="left_connector_link">
     <visual>
@@ -490,9 +453,6 @@
       <geometry>
         <mesh filename="visual/left_hand/hand_base_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -513,9 +473,6 @@
       <geometry>
         <mesh filename="visual/left_hand/t_cmc_yaw_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -535,9 +492,6 @@
       <geometry>
         <mesh filename="visual/left_hand/t_mcp_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -557,9 +511,6 @@
       <geometry>
         <mesh filename="visual/left_hand/if_mcp_pitch_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -579,9 +530,6 @@
       <geometry>
         <mesh filename="visual/left_hand/if_dip_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -601,9 +549,6 @@
       <geometry>
         <mesh filename="visual/left_hand/mf_mcp_pitch_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -623,9 +568,6 @@
       <geometry>
         <mesh filename="visual/left_hand/mf_dip_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -645,9 +587,6 @@
       <geometry>
         <mesh filename="visual/left_hand/rf_mcp_pitch_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -667,9 +606,6 @@
       <geometry>
         <mesh filename="visual/left_hand/rf_dip_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -689,9 +625,6 @@
       <geometry>
         <mesh filename="visual/left_hand/lf_mcp_pitch_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="1 1 1 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -711,9 +644,6 @@
       <geometry>
         <mesh filename="visual/left_hand/lf_dip_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -722,10 +652,6 @@
       </geometry>
     </collision>
   </link>
-  <!-- End of (links for part: left_hand) -->
-  <!---->
-  <!---->
-  <!-- Start of (links for part: right_hand) -->
   <link name="right_base_link" />
   <link name="right_connector_link">
     <visual>
@@ -752,9 +678,6 @@
       <geometry>
         <mesh filename="visual/right_hand/hand_base_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -775,9 +698,6 @@
       <geometry>
         <mesh filename="visual/right_hand/t_cmc_yaw_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="1 1 1 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -797,9 +717,6 @@
       <geometry>
         <mesh filename="visual/right_hand/t_mcp_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -819,9 +736,6 @@
       <geometry>
         <mesh filename="visual/right_hand/if_mcp_pitch_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -841,9 +755,6 @@
       <geometry>
         <mesh filename="visual/right_hand/if_dip_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -863,9 +774,6 @@
       <geometry>
         <mesh filename="visual/right_hand/mf_mcp_pitch_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -885,9 +793,6 @@
       <geometry>
         <mesh filename="visual/right_hand/mf_dip_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -907,9 +812,6 @@
       <geometry>
         <mesh filename="visual/right_hand/rf_mcp_pitch_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -929,9 +831,6 @@
       <geometry>
         <mesh filename="visual/right_hand/rf_dip_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -951,9 +850,6 @@
       <geometry>
         <mesh filename="visual/right_hand/lf_mcp_pitch_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -973,9 +869,6 @@
       <geometry>
         <mesh filename="visual/right_hand/lf_dip_link.glb" />
       </geometry>
-      <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -984,10 +877,6 @@
       </geometry>
     </collision>
   </link>
-  <!-- End of (links for part: right_hand) -->
-  <!---->
-  <!---->
-  <!-- Start of (joints for part: chassis) -->
   <joint name="WHEEL_LEFT" type="fixed">
     <origin xyz="0 0.2539 0.053" rpy="0 0 0" />
     <parent link="chassis_base_link" />
@@ -1000,10 +889,6 @@
     <child link="wheel_right" />
     <axis xyz="0 -1 0" />
   </joint>
-  <!-- End of (joints for part: chassis) -->
-  <!---->
-  <!---->
-  <!-- Start of (joints for part: torso) -->
   <joint name="ANKLE" type="revolute">
     <origin xyz="0 0 0.2875" rpy="1.5707963267948966 0 0" />
     <parent link="torso_base_link" />
@@ -1032,10 +917,6 @@
     <axis xyz="0 0 1" />
     <limit lower="-3.7524578917878086" upper="2.181661564992912" effort="140" velocity="3.141592653589793" />
   </joint>
-  <!-- End of (joints for part: torso) -->
-  <!---->
-  <!---->
-  <!-- Start of (joints for part: head) -->
   <joint name="NECK_BASE" type="fixed">
     <origin xyz="0 0 0.333" rpy="0 0 0" />
     <parent link="head_base_link" />
@@ -1060,10 +941,6 @@
     <parent link="neck2" />
     <child link="eyes" />
   </joint>
-  <!-- End of (joints for part: head) -->
-  <!---->
-  <!---->
-  <!-- Start of (joints for part: left_arm) -->
   <joint name="BASE_TO_LEFT_ARM_CONNECTOR" type="fixed">
     <origin xyz="0 0.0985 0.227" rpy="-1.5707963267948966 -1.5707963267948966 0" />
     <parent link="left_arm_base_link" />
@@ -1128,10 +1005,6 @@
     <parent link="left_j7" />
     <child link="left_ee" />
   </joint>
-  <!-- End of (joints for part: left_arm) -->
-  <!---->
-  <!---->
-  <!-- Start of (joints for part: right_arm) -->
   <joint name="BASE_TO_RIGHT_ARM_CONNECTOR" type="fixed">
     <origin xyz="0 -0.0985 0.227" rpy="1.5707963267948966 1.5707963267948966 0" />
     <parent link="right_arm_base_link" />
@@ -1196,10 +1069,6 @@
     <parent link="right_j7" />
     <child link="right_ee" />
   </joint>
-  <!-- End of (joints for part: right_arm) -->
-  <!---->
-  <!---->
-  <!-- Start of (joints for part: left_hand) -->
   <joint name="LEFT_CONNECTOR" type="fixed">
     <origin xyz="0 0 0" rpy="1.5707963267948966 0 3.141592653589793" />
     <parent link="left_base_link" />
@@ -1295,10 +1164,6 @@
     <limit lower="0" upper="2.0944" effort="0" velocity="0" />
     <mimic joint="LEFT_LF_MCP_PITCH" multiplier="1.2" offset="0.20245819323134223" />
   </joint>
-  <!-- End of (joints for part: left_hand) -->
-  <!---->
-  <!---->
-  <!-- Start of (joints for part: right_hand) -->
   <joint name="RIGHT_CONNECTOR" type="fixed">
     <origin xyz="0 0 0" rpy="1.5707963267948966 0 0" />
     <parent link="right_base_link" />
@@ -1388,8 +1253,6 @@
     <limit lower="0" upper="2.0944" effort="0" velocity="0" />
     <mimic joint="RIGHT_LF_MCP_PITCH" multiplier="1.2" offset="0.20245819323134223" />
   </joint>
-  <!-- End of (joints for part: right_hand) -->
-  <!---->
   <joint name="BASE_LINK_TO_CHASSIS_CONNECTOR" type="fixed">
     <origin xyz="0 0 0" rpy="0 0 0" />
     <parent link="base_link" />
