@@ -12,6 +12,28 @@ planning, and integration work.
 - Collision meshes for physics and planning
 - Mass and inertia definitions embedded in URDF links
 
+## Unitree models
+
+The repository also includes selected Unitree descriptions imported from
+`unitree_ros/robots` and normalized to portable local mesh paths.
+The upstream license is retained in the source package; these directories
+contain the selected model assets only, not the full ROS package.
+The applicable BSD 3-Clause license is included at
+`THIRD_PARTY_LICENSES/unitree_ros_LICENSE`.
+For appearance reference, see the official [Unitree product pages](https://www.unitree.com/).
+
+| Model | Entry point | Source variant |
+| --- | --- | --- |
+| Unitree G1 | `UnitreeG1/robot.urdf` | G1 29-DoF |
+| Unitree R1 | `UnitreeR1/robot.urdf` | R1 humanoid |
+| Unitree H1 | `UnitreeH1/robot.urdf` | H1 humanoid |
+| Unitree Go1 | `UnitreeGo1/robot.urdf` | Go1 quadruped |
+
+Unitree G1 and R1 retain the collision geometry supplied by their source
+URDFs. The imported H1 and Go1 descriptions provide visual geometry but do not
+define independent collision meshes; add simulator-specific collision shapes
+before physics or motion-planning use.
+
 ## Directory Overview
 
 ```text
@@ -78,10 +100,22 @@ These diagrams are generated from the checked-in robot assets and show the zero-
 | Marvin M6 S CCS 696 V4.0 | ![Marvin M6 V4.0 preview](Marvin_M6_S_CCS_696_V4.0/preview.png) |
 | Marvin M6 S CCS 696 Pro V2.0 | ![Marvin M6 Pro V2.0 preview](Marvin_M6_S_CCS_696_PRO_V2.0/preview.png) |
 | OpenArm | ![OpenArm preview](OpenArm/preview.png) |
+| Unitree G1 | ![Unitree G1 preview](UnitreeG1/preview.png) |
+| Unitree R1 | ![Unitree R1 preview](UnitreeR1/preview.png) |
+| Unitree H1 | ![Unitree H1 preview](UnitreeH1/preview.png) |
+| Unitree Go1 | ![Unitree Go1 preview](UnitreeGo1/preview.png) |
 
 ## Asset Conventions
 
 - Visual meshes use `.glb` in most models.
+- Unitree G1/R1/H1/Go1 visual meshes are converted to GLB under each model's
+  `visual/glb/` directory; original source meshes remain available under
+  `meshes/` for traceability and collision use.
+- Unitree visual colors are baked into the GLB materials; their URDF files do
+  not contain overriding `<material>` or `<color>` tags.
+- Product appearance is aligned to the official Unitree product pages: G1/R1/H1
+  use white and dark structural parts, while Go1 uses the black/grey consumer
+  robot finish.
 - Collision meshes use `.stl` or `.obj`, according to the model family.
 - Mesh file paths in URDF are relative to each robot folder.
 - Part URDF files are extracted subsets and are intended for modular loading.
@@ -101,6 +135,27 @@ These diagrams are generated from the checked-in robot assets and show the zero-
 - Load Marvin hands independently from `left_hand.urdf` or `right_hand.urdf`;
 	their root links are `left_ee` and `right_ee`, respectively.
 - Keep directory structure unchanged so relative mesh references remain valid.
+
+## Validation
+
+Run these lightweight checks from the repository root after changing an asset:
+
+```bash
+for f in $(find . -name '*.urdf'); do check_urdf "$f" >/dev/null || exit 1; done
+git diff --check
+```
+
+For visual changes, load the affected `robot.urdf` in a URDF viewer and verify
+the zero pose, left/right orientation, mesh scale, and collision alignment.
+Unitree visual geometry is provided as GLB, while the original mesh files are
+kept under each model's `meshes/` directory for traceability and collision use.
+
+## Pull request checklist
+
+- Keep mesh references relative to the robot directory.
+- Preserve existing link and joint names, limits, axes, mass, and inertia.
+- Include regenerated GLB or preview files when visual geometry changes.
+- Run `check_urdf` and `git diff --check`, and include the results in the PR.
 
 ## Maintenance Notes
 
