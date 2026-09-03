@@ -134,6 +134,27 @@ These diagrams are generated from the checked-in robot assets and show the zero-
 	their root links are `left_ee` and `right_ee`, respectively.
 - Keep directory structure unchanged so relative mesh references remain valid.
 
+## Validation
+
+Run these lightweight checks from the repository root after changing an asset:
+
+```bash
+for f in $(find . -name '*.urdf'); do check_urdf "$f" >/dev/null || exit 1; done
+git diff --check
+```
+
+For visual changes, load the affected `robot.urdf` in a URDF viewer and verify
+the zero pose, left/right orientation, mesh scale, and collision alignment.
+Unitree visual geometry is provided as GLB, while the original mesh files are
+kept under each model's `meshes/` directory for traceability and collision use.
+
+## Pull request checklist
+
+- Keep mesh references relative to the robot directory.
+- Preserve existing link and joint names, limits, axes, mass, and inertia.
+- Include regenerated GLB or preview files when visual geometry changes.
+- Run `check_urdf` and `git diff --check`, and include the results in the PR.
+
 ## Maintenance Notes
 
 - Avoid renaming mesh files unless all corresponding URDF references are updated.
