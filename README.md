@@ -18,6 +18,8 @@ The repository also includes selected Unitree descriptions imported from
 `unitree_ros/robots` and normalized to portable local mesh paths.
 The upstream license is retained in the source package; these directories
 contain the selected model assets only, not the full ROS package.
+The applicable BSD 3-Clause license is included at
+`THIRD_PARTY_LICENSES/unitree_ros_LICENSE`.
 For appearance reference, see the official [Unitree product pages](https://www.unitree.com/).
 
 | Model | Entry point | Source variant |
