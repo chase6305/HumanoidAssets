@@ -12,6 +12,26 @@ planning, and integration work.
 - Collision meshes for physics and planning
 - Mass and inertia definitions embedded in URDF links
 
+## Unitree models
+
+The repository also includes selected Unitree descriptions imported from
+`unitree_ros/robots` and normalized to portable local mesh paths.
+The upstream license is retained in the source package; these directories
+contain the selected model assets only, not the full ROS package.
+For appearance reference, see the official [Unitree product pages](https://www.unitree.com/).
+
+| Model | Entry point | Source variant |
+| --- | --- | --- |
+| Unitree G1 | `UnitreeG1/robot.urdf` | G1 29-DoF |
+| Unitree R1 | `UnitreeR1/robot.urdf` | R1 humanoid |
+| Unitree H1 | `UnitreeH1/robot.urdf` | H1 humanoid |
+| Unitree Go1 | `UnitreeGo1/robot.urdf` | Go1 quadruped |
+
+Unitree G1 and R1 retain the collision geometry supplied by their source
+URDFs. The imported H1 and Go1 descriptions provide visual geometry but do not
+define independent collision meshes; add simulator-specific collision shapes
+before physics or motion-planning use.
+
 ## Directory Overview
 
 ```text
@@ -78,10 +98,22 @@ These diagrams are generated from the checked-in robot assets and show the zero-
 | Marvin M6 S CCS 696 V4.0 | ![Marvin M6 V4.0 preview](Marvin_M6_S_CCS_696_V4.0/preview.png) |
 | Marvin M6 S CCS 696 Pro V2.0 | ![Marvin M6 Pro V2.0 preview](Marvin_M6_S_CCS_696_PRO_V2.0/preview.png) |
 | OpenArm | ![OpenArm preview](OpenArm/preview.png) |
+| Unitree G1 | ![Unitree G1 preview](UnitreeG1/preview.png) |
+| Unitree R1 | ![Unitree R1 preview](UnitreeR1/preview.png) |
+| Unitree H1 | ![Unitree H1 preview](UnitreeH1/preview.png) |
+| Unitree Go1 | ![Unitree Go1 preview](UnitreeGo1/preview.png) |
 
 ## Asset Conventions
 
 - Visual meshes use `.glb` in most models.
+- Unitree G1/R1/H1/Go1 visual meshes are converted to GLB under each model's
+  `visual/glb/` directory; original source meshes remain available under
+  `meshes/` for traceability and collision use.
+- Unitree visual colors are baked into the GLB materials; their URDF files do
+  not contain overriding `<material>` or `<color>` tags.
+- Product appearance is aligned to the official Unitree product pages: G1/R1/H1
+  use white and dark structural parts, while Go1 uses the black/grey consumer
+  robot finish.
 - Collision meshes use `.stl` or `.obj`, according to the model family.
 - Mesh file paths in URDF are relative to each robot folder.
 - Part URDF files are extracted subsets and are intended for modular loading.
