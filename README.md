@@ -90,7 +90,11 @@ before physics or motion-planning use.
 
 ## Model previews
 
-These diagrams are generated from the checked-in robot assets and show the zero-pose visual geometry used by each main URDF.
+These 2400 × 2400 previews are rendered directly from the current robot assets
+with Blender Cycles, up to 256 samples, adaptive sampling, and studio lighting.
+Independent joints are at zero; mimic joints include their configured offsets.
+Dexforce and Marvin previews use `robot_with_ee.urdf` to include the hands;
+the other models use the main URDF entry points listed above.
 
 | Model | Preview |
 | --- | --- |
@@ -104,6 +108,24 @@ These diagrams are generated from the checked-in robot assets and show the zero-
 | Unitree R1 | ![Unitree R1 preview](UnitreeR1/preview.png) |
 | Unitree H1 | ![Unitree H1 preview](UnitreeH1/preview.png) |
 | Unitree Go1 | ![Unitree Go1 preview](UnitreeGo1/preview.png) |
+
+Regenerate all previews with Blender (validated with Blender 5.2.2):
+
+```bash
+blender -b --factory-startup --python-exit-code 1 --python scripts/render_previews.py --
+```
+
+To regenerate one model, pass its directory name:
+
+```bash
+blender -b --factory-startup --python-exit-code 1 --python scripts/render_previews.py -- Dexforce_W1_V3
+```
+
+Use `--resolution`, `--samples`, and `--threads` to adjust rendering cost, or
+`--output-dir /tmp/previews` to review images before replacing `preview.png`.
+The script preserves GLB materials and authored normals, reconstructs smooth
+shading with sharp edges for meshes without normals, and disables depth of field
+to keep the entire model in focus. Rendering does not modify source URDFs or meshes.
 
 ## Asset Conventions
 
