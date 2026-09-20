@@ -164,7 +164,9 @@
     <parent link="elbow_pitch_r_j3_link" />
     <child link="elbow_yaw_r_j4_link" />
     <axis xyz="0 0 1" />
-    <limit lower="-1.5707963267948966" upper="2.5830872929516078" effort="67" velocity="4.145" />
+    <!-- 拟人化求解：右肘反肘下限由 -90° 收紧为 0°；原始限位存档如下。 -->
+    <!-- <limit lower="-1.5707963267948966" upper="2.5830872929516078" effort="67" velocity="4.145" /> -->
+    <limit lower="0" upper="2.5830872929516078" effort="67" velocity="4.145" />
   </joint>
   <joint name="WRIST_PITCH_R_J5" type="revolute">
     <origin xyz="-0.015 -0.143 0" rpy="0 0 0" />
